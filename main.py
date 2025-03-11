@@ -38,6 +38,7 @@ def check_password_strength(password):
         return "❌ Weak Password - Improve it using the suggestions below.", feedback
 
 def main():
+    st.set_page_config(page_title="Password Strength Checker", layout='wide')
     st.title("🔐 Password Strength Checker")
     
     password = st.text_input("Enter your password:", type="password")
