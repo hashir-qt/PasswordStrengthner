@@ -31,11 +31,13 @@ def check_password_strength(password):
 
     # Strength Rating
     if score == 4:
-        return "✅ Strong Password!", feedback
+        return "✅ Strong Password! Score 4" , feedback
     elif score == 3:
-        return "⚠️ Moderate Password - Consider adding more security features.", feedback
+        return "⚠️ Moderate Password - Consider adding more security features. Score 3", feedback
+    elif score == 2:
+        return "⚠️ Weak Password - Consider adding more security features. Score 2", feedback
     else:
-        return "❌ Weak Password - Improve it using the suggestions below.", feedback
+        return "❌ Weak Password - Improve it using the suggestions below. Score 1", feedback
 
 def main():
     st.set_page_config(page_title="Password Strength Checker", layout='wide')
